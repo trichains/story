@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Feedback Story</title>
+  </head>
+  <body>
+    <div class="feedback-container">
+      <div class="feedback-header">
+        <h1>Feedback story.</h1>
+        <p>
+          Alguns segundos e você vai entender toda performance que te aguarda.
+        </p>
+      </div>
+      <!-- Thumbnails -->
+      <div class="story-container">
+        <div class="story-content" onclick="openModal('video1.mp4')">
+          <div class="story">
+            <video class="thumbnail-video" disablePictureInPicture muted>
+              <source src="video1.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <span class="username">@china</span>
+        </div>
+        <div class="story-content" onclick="openModal('video2.mp4')">
+          <div class="story" onclick="expandVideo('video2.mp4')">
+            <video class="thumbnail-video" disablePictureInPicture muted>
+              <source src="video2.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <span class="username">@asmr</span>
+        </div>
+        <div class="story-content" onclick="openModal('video3.mp4')">
+          <div class="story" onclick="expandVideo('video3.mp4')">
+            <video class="thumbnail-video" disablePictureInPicture muted>
+              <source src="video3.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <span class="username">@pedro</span>
+        </div>
+
+        <!-- Exibição do video -->
+        <div id="video-modal" class="video-modal" style="display: none">
+          
+          <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+          </div>
+          <div class="modal-header">
+            <div class="video-title">
+              <h1>Vídeos</h1>
+              <div class="underline"></div>
+            </div>
+          </div>
+
+          <div class="video-container">
+            <video id="modal-video" autoplay>
+            </video>
+            <span class="play-pause">▶️</span>
+          </div>
+          
+          <div class="video-controls">
+            <span class="close">X</span>
+            <span class="share">➥</span>
+
+            <div class="left-controls">
+              <span class="up-arrow">↑</span>
+              <span class="down-arrow">↓</span>
+            </div>
+
+            <span class="mute">🔊</span>
+          </div>
+          <div class="video-description">
+            <p>blablabla teste teste blabla testee...</p>
+            <button class="buy-button">Comprar</button>
+          </div>
+      </div>
+        
+    </div>
+
+    <script src="videoLoop.js"></script>
+
+    <script src="modalVideo.js"></script>
+  </body>
+</html>
